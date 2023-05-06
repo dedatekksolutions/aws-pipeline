@@ -9,8 +9,8 @@ export class UdemyPipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const pipeline = new Pipeline(this, "PipeLine", {
-      pipelineName: "Pipeline",
+    const pipeline = new Pipeline(this, "UdemyPipeLine", {
+      pipelineName: "UdemyPipeline",
       crossAccountKeys: false
     });
 
@@ -20,9 +20,9 @@ export class UdemyPipelineStack extends cdk.Stack {
       stageName:"Source",
       actions: [
         new GitHubSourceAction({
-          owner:"dedatekkservices",
+          owner:"dedatekksolutions",
           repo:"udemy-cicd-pipeline",
-          branch:"master",
+          branch:"main",
           actionName:"Pipeline_Source",
           oauthToken:cdk.SecretValue.secretsManager("github-token"),
           output:sourceOutput
