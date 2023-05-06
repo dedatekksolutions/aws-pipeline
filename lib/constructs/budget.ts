@@ -14,7 +14,7 @@ export class Budget extends Construct {
       budget: {
         budgetLimit: {
           amount: props.budgetAmount,
-          unit: "AUD",
+          unit: "USD",
         },
         budgetName: "Monthly Budget",
         budgetType: "COST",
