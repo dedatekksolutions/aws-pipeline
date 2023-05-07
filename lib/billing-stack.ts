@@ -1,6 +1,5 @@
-import { Stack, StackProps } from "aws-cdk-lib";
+import { Construct, Stack, StackProps } from "aws-cdk-lib";
 import { Budget } from "./constructs/budget";
-import { Construct } from "constructs";
 
 
 interface BillingStackProps extends StackProps {
